@@ -36,6 +36,14 @@ export default {
       type: Boolean,
       default: false
     },
+    nodata:{
+      type:String,
+      default:'暂无更多数据'
+    },
+    loading:{
+      type:String,
+      default:'正在加载更多...'
+    },
     // 下拉移动比例
     distanceIndex: {
       type: Number,
@@ -129,10 +137,10 @@ export default {
     bottomText() {
       switch (this.bottomStatus) {
         case BOTTOMSTATUS.loading:
-          return "正在加载更多...";
+          return this.loading;
           break;
         case BOTTOMSTATUS.nodata:
-          return "暂无更多数据";
+          return this.nodata;
           break;
         default:
           return "";

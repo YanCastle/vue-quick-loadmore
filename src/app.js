@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueQuickLoadmore from './VueQuickLoadmore.vue'
 
-Vue.component('quick-loadmore', VueQuickLoadmore)
+Vue.component('castle-loadmore', VueQuickLoadmore)
 
 new Vue({
     el: '#app',
