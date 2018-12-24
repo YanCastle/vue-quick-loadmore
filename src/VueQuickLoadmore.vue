@@ -36,13 +36,25 @@ export default {
       type: Boolean,
       default: false
     },
-    nodata:{
-      type:String,
-      default:'暂无更多数据'
+    nodata: {
+      type: String,
+      default: "暂无更多数据"
     },
-    loading:{
-      type:String,
-      default:'正在加载更多...'
+    loading: {
+      type: String,
+      default: "正在加载更多..."
+    },
+    topLoading: {
+      type: String,
+      default: "正在刷新..."
+    },
+    topPulling: {
+      type: String,
+      default: "下拉刷新"
+    },
+    topLimit: {
+      type: String,
+      default: "释放刷新"
     },
     // 下拉移动比例
     distanceIndex: {
@@ -122,13 +134,13 @@ export default {
     topText() {
       switch (this.topStatus) {
         case TOPSTATUS.pulling:
-          return "下拉刷新";
+          return this.topPulling;
           break;
         case TOPSTATUS.limit:
-          return "释放刷新";
+          return this.topLimit;
           break;
         case TOPSTATUS.loading:
-          return "正在刷新...";
+          return this.topLoading;
           break;
         default:
           return "";
