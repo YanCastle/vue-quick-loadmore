@@ -9,7 +9,7 @@
       </slot>
       <slot></slot>
       <slot name="bottom">
-        <div class="vsim-load-footer">
+        <div class="vsim-load-footer" v-show="bottomText">
           <div>{{bottomText}}</div>
         </div>
       </slot>
